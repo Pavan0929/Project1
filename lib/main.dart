@@ -1,4 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:myapp/eighthpg.dart';
+import 'package:myapp/secondpg.dart';
+import 'package:myapp/third_screen.dart';
+import 'package:myapp/fourth_screen.dart';
+import 'package:myapp/fifthpg.dart';
+import 'package:myapp/sixpg.dart';
+import 'package:myapp/seventhpg.dart';
+import 'package:myapp/eighthpg.dart';
+import 'package:myapp/ninethpg.dart';
+import 'package:myapp/tenthpg.dart';
+
 
 void main() {
   runApp(const MyApp());
@@ -9,9 +20,13 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    
+    return MaterialApp(debugShowCheckedModeBanner: false,
 
-      home: NewApp(),
+      home: ThirdScreen(
+        
+      ),
+      
     );
   }
 }
@@ -28,49 +43,33 @@ class _NewAppState extends State<NewApp> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
+      
       child: Scaffold(
-        body: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children:[
-
+        
+        
+        body: Container(
+          padding:EdgeInsets.fromLTRB(0, 4, 0, 4),
+          decoration: BoxDecoration(
+            color: const Color.fromARGB(241, 255, 255, 255)
+            
+          ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Container(
+                padding:EdgeInsets.fromLTRB(0, 10, 0, 10),
+                decoration: BoxDecoration(
+                  color: const Color.fromARGB(241, 255, 255, 255)
+                  
+                ),
+              )
+            ],
+          ),
+     
           
-          Row(
-            children: [
-              Text("PAVAN",style:TextStyle(fontSize: 20,color:Colors.amber)),
-              SizedBox(width:20),
-              Text("RAHIL",style:TextStyle(fontSize: 20,color:Colors.red)),
-              SizedBox(width:20),
-              Text("VIKRAM",style:TextStyle(fontSize: 20,color:Colors.purple)),
-              SizedBox(width:20),
-            ],
-
-          ),
-          SizedBox(height: 20,),
-          Row(
-            children: [
-              Text("SAURAV",style:TextStyle(fontSize: 20,color:Colors.pink)),
-              SizedBox(width:20),
-              Text("MOHIT",style:TextStyle(fontSize: 20,color:Colors.green)),
-              SizedBox(width:20),
-              Text("DEVESH",style:TextStyle(fontSize: 20,color:Colors.blue)),
-              SizedBox(width:20),
-            ],
-
-          ),
-          Container(
-            width:50,
-            height: 50,
-            color: Colors.red,
-
-
-          )
-          ]
-
-        )
-    
-    
+        ),
       ),
     );
+    
   }
 }
-
